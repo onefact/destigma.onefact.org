@@ -12,7 +12,7 @@ const HomePage = () => {
                             <div class="w-col w-col-6">
                                 <h1 class="main-heading">Get an STI Test Recommendation with deSTIgma</h1>
                                 <p class="main-subtitle">The deSTIgma questionnaire will help you evaluate your risk for STIs and STDs, and connect you to resources near you.</p>
-                                <a href="/survey" class="button">Let&#x27;s Go!</a><a href="#" class="button hollow">Learn More</a>
+                                <Link to="/survey" class="button">Let&#x27;s Go!</Link><a href="#" class="button hollow">sans undertale</a>
                             </div>
                         </div>
                     </div>
