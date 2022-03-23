@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SurveyPage from './pages/SurveyPage';
+import SurveyResultsPage from './pages/SurveyResultsPage';
 
-function App() {
+const App = () => {
+  const [ surveyResults, setSurveyResults ] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/survey" element={<SurveyPage resultCallback={setSurveyResults} />} />
+        <Route path="/results" element={<SurveyResultsPage results={surveyResults} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
