@@ -10,7 +10,8 @@ Bacterial STIs include chlamydia, gonorrhea, and syphilis.[1] Viral STIs include
 Some vaccinations may also decrease the risk of certain infections including hepatitis B and some types of HPV.[2] Safe sex practices, such as use of condoms, having a smaller number of sexual partners, and being in a relationship in which each person only has sex with the other also decreases the risk of STIs.[1][2] Comprehensive sex education may also be useful.[8] Most STIs are treatable and curable; of the most common infections, syphilis, gonorrhea, chlamydia, and trichomoniasis are curable, while HIV/AIDS is not curable.[1]
             </p>
             <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" alt="sans" />
-        </div> 
+            <input type="text"/>
+        </div>
     );
 };
 
