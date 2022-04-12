@@ -26,3 +26,34 @@ code {
 .sti-info {
   display: flex;
 }
+
+.map-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: darkorange;
+}
+
+.map-marker .map-marker-label {
+  display: none;
+}
+
+.map-marker:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.map-marker:hover .map-marker-label {
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  background-color: white;
+  padding: 4px;
+  bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
