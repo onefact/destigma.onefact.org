@@ -3,7 +3,7 @@ import React from 'react';
 const SurveyResultsPage = ({ results }) => {
     return (
         <div>
-            congratulations, you are dead!!
+            Re recommend you get tested for the following tests:
             <p>{JSON.stringify(results)}</p>
         </div>
     );
