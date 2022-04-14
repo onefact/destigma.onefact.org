@@ -6,6 +6,7 @@ import SurveyResultsPage from './pages/SurveyResultsPage';
 import ConsentForm from './pages/ConsentForm';
 import AboutUs from './pages/AboutUs';
 import NavigationBar from './pages/NavigationBar';
+// import FullConsentForm from '.pages/FullConsentForm';
 
 const App = () => {
   const [ surveyResults, setSurveyResults ] = useState(null);

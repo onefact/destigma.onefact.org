@@ -7,7 +7,8 @@ const NavigationBar =()=> {
         <a href="/" class="brand-link w-nav-brand">
            <div class="logo-text">deSTIgma</div>
         </a>
-        <nav role="navigation" class="nav-menu w-nav-menu"><a href="/" class="nav-link w-nav-link">The Need for STI Testing</a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+        <a href="/" class="nav-link w-nav-link">The Need for STI Testing</a>
         <a href="/results" class="nav-link w-nav-link">Service Locator</a>
         <a href="/aboutus" class="nav-link w-nav-link">About Us</a>
         <a href="/consentform" aria-current="page" class="nav-link w-nav-link"><strong>Get Started</strong></a></nav>
