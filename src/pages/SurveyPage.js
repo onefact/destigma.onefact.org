@@ -49,7 +49,7 @@ const surveyJson = {
             },
             {
             value: "item2",
-            text: "Over 25"
+            text: "25 or over"
             }
         ]
         },
@@ -96,11 +96,7 @@ const surveyJson = {
         name: "question6",
         title: "Have you ever experienced domestic violence or sexual assault? If Yes, please be aware of the confidential, 24/7 National Domestic Violence Hotline at 1-800-799-7233 (SAFE)."
         },
-        {
-        type: "text",
-        name: "question15",
-        title: "Enter your zip code if you would like to learn about sexual health resources near you."
-        },
+
         {
         type: "checkbox",
         name: "question18",
@@ -222,25 +218,7 @@ const surveyJson = {
         name: "question7",
         title: "Have you had sex (anal, oral, vaginal) with someone who had symptoms of an STI or who has recently tested positive?"
         },
-        {
-        type: "checkbox",
-        name: "question8",
-        title: "Which of the following sexual activities have you engaged in in the past 3 months?",
-        choices: [
-            {
-            value: "item1",
-            text: "Sex with female partner"
-            },
-            {
-            value: "item3",
-            text: "Sex with male partner "
-            },
-            {
-            value: "item2",
-            text: "Sex with sex worker"
-            }
-        ]
-        },
+
         {
         type: "boolean",
         name: "question9",
