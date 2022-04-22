@@ -222,12 +222,12 @@ const surveyJson = {
         {
         type: "boolean",
         name: "question9",
-        title: "Have you had unprotected sex (no physical barrier, such as a male or female condom) in the past three months?"
+        title: "Have you had unprotected sex (no physical barrier, such as a male or female condom) in the past month?"
         },
         {
         type: "boolean",
         name: "question10",
-        title: "Have you had more than three sexual partners in the last 3 months?"
+        title: "Have you had more than three sexual partners in the last 2 months?"
         },
         {
         type: "checkbox",

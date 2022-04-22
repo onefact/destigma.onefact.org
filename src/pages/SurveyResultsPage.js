@@ -13,26 +13,30 @@ const CLINIC_LOCATIONS = [
     {
         lat: 40.75153282302176,
         lng: -73.98079679718066,
-        name: 'Pure OBGYN',
-        link: 'https://pureobgyn.com/'
+        name: '1. Pure OBGYN',
+        link: 'https://pureobgyn.com/',
+        id: '#1'
     },
     {
         lat: 40.74041007836597,
         lng: -73.99294473765816,
         name: 'Pure OBGYN',
-        link: 'https://pureobgyn.com/'
+        link: 'https://pureobgyn.com/',
+        id: '#2'
     },
     {
         lat: 40.67611154741919,
         lng: -73.97229975300368,
         name: 'Pure OBGYN',
-        link: 'https://pureobgyn.com/'
+        link: 'https://pureobgyn.com/',
+        id: '#3'
     },
     {
         lat: 40.76568345636664,
         lng: -73.9611212953291,
         name: 'Garden OBGYN',
-        link: 'https://www.gardenobgyn.com/contents/locations/nyc'
+        link: 'https://www.gardenobgyn.com/contents/locations/nyc',
+        id: '#4'
     },
     {
         lat: 40.75989621484998,
@@ -368,26 +372,79 @@ const CLINIC_LOCATIONS = [
 
 const SurveyResultsPage = ({ results }) => {
     return (
-        <div>
-            Re recommend you get tested for the following tests:
-            <p>{JSON.stringify(results)}</p>
-            <div>
-                <p>Go over here to become not dead!!!</p>
-                <div style={{ height: '60vh', width: '60vw' }}>
-                    <GoogleMapReact
-                        bootstrapURLKeys={{ key: 'AIzaSyBMpoN1LPS6i3QBfQ5FcBUnFZsIwmKTh18' }}
-                        defaultCenter={MAP_CENTER}
-                        defaultZoom={MAP_ZOOM}
-                    >
-                        {
-                            CLINIC_LOCATIONS.map((clinic) => (
-                                <MapMarker lat={clinic.lat} lng={clinic.lng} name={clinic.name} link={clinic.link} />
-                            ))
-                        }
-                    </GoogleMapReact>
-                </div>
-            </div>
-        </div >
+      <>
+      <div class="section">
+        <h1 class="heading-10">Test Results and Map Locator</h1>
+        <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
+          <p>{JSON.stringify(results)}</p>
+      </div>
+      <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
+      <div>
+        <div class="map-column">
+          <GoogleMapReact
+              bootstrapURLKeys={{ key: 'AIzaSyBMpoN1LPS6i3QBfQ5FcBUnFZsIwmKTh18' }}
+              defaultCenter={MAP_CENTER}
+              defaultZoom={MAP_ZOOM}
+          >
+              {
+                  CLINIC_LOCATIONS.map((clinic) => (
+                      <MapMarker lat={clinic.lat} lng={clinic.lng} name={clinic.name} id={clinic.id}/>
+                  ))
+              }
+          </GoogleMapReact></div>
+        </div>
+
+        <div class ="clinic-list">
+          <ol class="clinic-list-info">
+
+            <li><div class="heading-clinic" id="1"><strong>Pure OBGYN</strong></div>
+              <div class="clinic-info">274 Madison Ave suite 300, New York, NY 10016</div>
+              <div class="clinic-info"><i>Hours:</i></div>
+                <ul>
+                  <li class="hours-list"> M-F 8:00am-6:30pm</li>
+                  <li class="hours-list"> Closed Sat-Sun</li>
+                </ul>
+              <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
+              <div class="clinic-note">Women's Health, Requires co-pay</div>
+
+
+            <li><div class="heading-clinic" id="2"><strong>Pure OBGYN</strong></div>
+              <div class="clinic-info">32 W 20th St, New York, NY 10011</div>
+              <div class="clinic-info"><i>Hours:</i></div>
+                <ul>
+                  <li class="hours-list"> M-F 8:00am-6:30pm</li>
+                  <li class="hours-list"> Closed Sat-Sun</li>
+                </ul>
+              <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
+              <div class="clinic-note">Women's Health, Requires co-pay</div>
+
+            <li><div class="heading-clinic" id="3"><strong>Pure OBGYN</strong></div>
+              <div class="clinic-info">225 St Johns Pl, Brooklyn, NY 11217</div>
+              <div class="clinic-info"><i>Hours:</i></div>
+                <ul>
+                  <li class="hours-list"> M-F 8:00am-6:30pm</li>
+                  <li class="hours-list"> Closed Sat-Sun</li>
+                </ul>
+              <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
+              <div class="clinic-note">Women's Health, Requires co-pay</div>
+
+            <li><div class="heading-clinic" id="4"><strong>Garden OBGYN</strong></div>
+              <div class="clinic-info">260 E 67th St, New York, NY 10065</div>
+              <div class="clinic-info"><i>Hours:</i></div>
+                <ul>
+                  <li class="hours-list"> M-Th 8:00am-8:00pm</li>
+                  <li class="hours-list"> Fri-Sat 8:00am-2:15pm</li>
+                  <li class="hours-list"> Sun 8:00am-4:00pm</li>
+                </ul>
+              <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://www.gardenobgyn.com/</a></li>
+              <div class="clinic-note">notes</div>
+
+          </ol>
+        </div>
+
+
+
+      </>
     );
 }
 

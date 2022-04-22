@@ -1,10 +1,10 @@
 import React from 'react';
 
-const MapMarker = ({ name, link }) => {
+const MapMarker = ({ name, id }) => {
     return (
         <>
-            <a className="map-marker" href={link} target="_blank" rel="noreferrer noopener">
-                <div className="map-marker-label">{name}</div> 
+            <a className="map-marker" href={id} rel="noreferrer noopener">
+                <div className="map-marker-label">{name}</div>
             </a>
         </>
     );
