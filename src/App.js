@@ -7,6 +7,7 @@ import ConsentForm from './pages/ConsentForm';
 import AboutUs from './pages/AboutUs';
 import NavigationBar from './pages/NavigationBar';
 import FullConsentForm from './pages/FullConsentForm';
+import Education from './pages/Education';
 
 const App = () => {
   const [ surveyResults, setSurveyResults ] = useState(null);
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/results" element={<SurveyResultsPage results={surveyResults} />} />
         <Route path="/aboutus" element={<AboutUs />}/>
         <Route path="/fullconsentform" element={<FullConsentForm/>}/>
+        <Route path="/education" element={<Education/>}/>
       </Routes>
     </BrowserRouter>
   );

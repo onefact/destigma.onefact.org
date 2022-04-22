@@ -9,6 +9,7 @@ const NavigationBar =()=> {
       <nav id="main-menu" class="nav-bar-wrapper">
         <a href="/consentform" class="nav-link w-nav-link"><strong>Get Started</strong></a>
         <a href="/aboutus" class="nav-link w-nav-link">About Us</a>
+        <a href="/education" class= "nav-link w-nav-link">Education</a>
         <a href="/results" class="nav-link w-nav-link">Service Locator</a>
         <a href="/" class="nav-link w-nav-link">The Need for STI Testing</a>
         <img src={logo} href="/" class="destig-icon"></img>

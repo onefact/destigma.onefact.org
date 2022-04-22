@@ -20,29 +20,30 @@ const CLINIC_LOCATIONS = [
     {
         lat: 40.74041007836597,
         lng: -73.99294473765816,
-        name: 'Pure OBGYN',
+        name: '2. Pure OBGYN',
         link: 'https://pureobgyn.com/',
         id: '#2'
     },
     {
         lat: 40.67611154741919,
         lng: -73.97229975300368,
-        name: 'Pure OBGYN',
+        name: '3. Pure OBGYN',
         link: 'https://pureobgyn.com/',
         id: '#3'
     },
     {
         lat: 40.76568345636664,
         lng: -73.9611212953291,
-        name: 'Garden OBGYN',
+        name: '4. Garden OBGYN',
         link: 'https://www.gardenobgyn.com/contents/locations/nyc',
         id: '#4'
     },
     {
         lat: 40.75989621484998,
         lng: -73.97750562416519,
-        name: 'Garden OBGYN',
-        link: 'https://www.gardenobgyn.com/contents/locations/nyc'
+        name: '5. Garden OBGYN',
+        link: 'https://www.gardenobgyn.com/contents/locations/nyc',
+        id:'#5'
     },
     {
         lat: 40.72679196544538,
@@ -378,7 +379,7 @@ const SurveyResultsPage = ({ results }) => {
         <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
           <p>{JSON.stringify(results)}</p>
       </div>
-      <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
+      <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll through the list of clinics to find testing near you!</div>
       <div>
         <div class="map-column">
           <GoogleMapReact
@@ -438,6 +439,16 @@ const SurveyResultsPage = ({ results }) => {
                 </ul>
               <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://www.gardenobgyn.com/</a></li>
               <div class="clinic-note">notes</div>
+
+            <li><div class="heading-clinic" id="5"><strong>Garden OBGYN</strong></div>
+              <div class="clinic-info">Address</div>
+              <div class="clinic-info"><i>Hours:</i></div>
+                <ul>
+                  <li class="hours-list"> M-F 8:00am-6:30pm</li>
+                  <li class="hours-list"> Closed Sat-Sun</li>
+                </ul>
+              <a href="link" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
+              <div class="clinic-note"></div>
 
           </ol>
         </div>

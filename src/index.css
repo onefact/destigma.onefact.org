@@ -11,6 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a {
+  font-family: 'Segoe UI';
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -116,6 +119,7 @@ code {
   margin-left: 20px;
   padding-top: 20px;
 }
+
 p {
   text-align: justify;
 }
@@ -128,10 +132,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
+  padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
   flex: 1 0 0;
   margin: 0.5em;
   background-color: white;
@@ -139,8 +143,8 @@ p {
 
 .section2 {
   background-color: #dde7ed;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-bottom: 50px;
   padding-top: 20px;
 }
@@ -418,4 +422,51 @@ ol> li::marker {
   bottom: 16px;
   border-radius: 4px;
   border: 1px solid black;
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 5vh;
+  flex: 1 0 0;
+  margin: 0.5em;
+  background-color: white;
+}
+
+.text-block-5 {
+  text-align: left justify;
+  font-size: 1.2em;
+}
+
+.education-list {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  padding-right: 3vw;
+  padding-bottom: 3vh;
+  padding-left: 20px;
+  background-color: lightgray;
+}
+
+.education-link {
+  font-family: 'Segoe UI';
+  box-shadow: inset 0 3px 0 0 transparent;
+  transition-property: box-shadow, color;
+  transition-timing-function: ease, ease;
+  text-decoration: none;
+}
+
+.education-link-list {
+  list-style-type: none;
+  padding-left:5px;
+
+}
+
+.headshot {
+  width: 20vw;
 }

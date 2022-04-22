@@ -1,4 +1,5 @@
 import React from 'react';
+import vivian from './vivian-headshot.jpg';
 
 const AboutUs = ()=> {
 
@@ -21,7 +22,7 @@ return (
         <div class="text-block-4"> Vivian is an incoming graduate student at Boston University, studying Tissue Engineering. She has experience in microscopy,, image processing, and now website design. She loves art museums, rock climbing, and vegan food.</div>
 
         <div class="column right">
-          <img href= "https://www.linkedin.com/in/vivianshi01/" src="vivian-headshot.jpg" id="vivian" class="vivian" alt="Vivian Shi headshot"/></div>
+          <a href= "https://www.linkedin.com/in/vivianshi01/" target="blank"> <img src={vivian} id="vivian" class="headshot" alt="Vivian Shi headshot"/></a></div>
         </div>
       </div>
 
