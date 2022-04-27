@@ -23,7 +23,7 @@ return (
               <input type="text" class="text-field w-input" maxlength="256" name="field" data-name="Field" placeholder="Full Name" id="field" required/>
               <label class="checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="checkbox" required/>
               <span class="checkbox" for="checkbox">  I consent to the collection of data through the deSTIgma questionnaire in order to receive an STI risk assessment.</span></label>
-              <Link to="/survey" class="button" value="Submit" data-wait="Please wait..."></Link>
+              <div class="pad-vertical center-button"><Link to="/survey" class="button2" value="Submit" data-wait="Please wait...">Submit</Link></div>
             </form>
             <div class="w-form-done">
                <div>Thank you! Your submission has been received!</div>

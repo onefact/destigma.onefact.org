@@ -1,5 +1,9 @@
 import React from 'react';
 import vivian from './vivian-headshot.jpg';
+import andy from './andy-headshot.jpg';
+import susy from './susy-headshot.png';
+import rux from './rux-headshot.jpg';
+import kat from './kat-headshot.jpg';
 
 const AboutUs = ()=> {
 
@@ -18,52 +22,55 @@ return (
       <div class ="text-block-2"><strong>Core Team</strong></div>
       <div class= "row">
         <div class="column left">
-        <div class="subheading-home-1"> Vivian Shi</div>
-        <div class="text-block-4"> Vivian is an incoming graduate student at Boston University, studying Tissue Engineering. She has experience in microscopy,, image processing, and now website design. She loves art museums, rock climbing, and vegan food.</div>
+          <div class="subheading-home-1"> Vivian Shi</div>
+          <div class="text-block-4"> Vivian is an incoming graduate student at Boston University, studying Tissue Engineering. She has experience in microscopy, image processing, and now website design. She loves art museums, rock climbing, and vegan food.</div>
+        </div>
 
-        <div class="column right">
+        <div class=" right">
           <a href= "https://www.linkedin.com/in/vivianshi01/" target="blank"> <img src={vivian} id="vivian" class="headshot" alt="Vivian Shi headshot"/></a></div>
-        </div>
+
       </div>
 
       <div class= "row">
         <div class="column left">
-        <div class="subheading-home-1"> Susanna Baek</div>
-        <div class="text-block-4"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="subheading-home-1"> Susanna Baek</div>
+          <div class="text-block-4"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+        </div>
 
         <div class="column right">
-          <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
+          <img src={susy} id="casesperyear" class="headshot" alt="sans"/></div>
+
       </div>
 
       <div class= "row">
         <div class="column left">
-        <div class="subheading-home-1"> Ruxandra Tonea</div>
-        <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="subheading-home-1"> Ruxandra Tonea</div>
+          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+        </div>
 
         <div class="column right">
-          <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
+          <img src={rux} id="casesperyear" class="headshot" alt="sans"/></div>
+
       </div>
 
       <div class= "row">
         <div class="column left">
-        <div class="subheading-home-1"> Andy Garcia</div>
-        <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="subheading-home-1"> Andy Garcia</div>
+          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+        </div>
 
         <div class="column right">
-          <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
+          <img src={andy} id="casesperyear" class="headshot" alt="sans"/></div>
       </div>
 
       <div class= "row">
         <div class="column left">
-        <div class="subheading-home-1"> Katharyn Fatehi</div>
-        <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="subheading-home-1"> Katharyn Fatehi</div>
+          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+        </div>
 
         <div class="column right">
-          <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
+          <img src={kat} id="casesperyear" class="headshot" alt="sans"/></div>
       </div>
     </div>
 
@@ -73,25 +80,15 @@ return (
       <div class= "row">
         <div class="column left">
         <div class="subheading-home-1"> Jaan Altosaar, PhD</div>
-        <div class="text-block-2"><i>Project Mentor</i></div>
-        <div class="text-block-1"> Post-doctoral researcher at Columbia University Irving Medical Center</div>
+          <div class="text-block-1"><i>Project Mentor</i></div>
+          <div class="text-block-1"> Post-doctoral researcher at Columbia University Irving Medical Center</div>
+        </div>
 
         <div class="column right">
           <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
-      </div>
-
-      <div class= "row">
-        <div class="column left">
-        <div class="subheading-home-1"> Elizabeth Hillman, PhD</div>
-        <div class="text-block-2"><i>Principal Investogator</i></div>
-        <div class="text-block-1"> Herbert and Florence Irving Professor at the Zuckerman Institute; Professor of Biomedical Engineering and Radiology (Physics)</div>
-
-        <div class="column right">
-          <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
-        </div>
       </div>
     </div>
+
   </>
 )
 }

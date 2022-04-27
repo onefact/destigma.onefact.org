@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StiInfo from './StiInfo';
+import graph2 from './2014-2019-std-Increases.jpg';
+import graph3 from './2020-STD-covid-increase.jpg';
+import graph1 from './chlam-gon-syph-2015.png';
+import columbia_logo from './Columbia_Engineering_Logo.png'
+import onefact_logo from './one-fact-logo.png'
 
 const HomePage = () => {
     return (
@@ -9,11 +14,14 @@ const HomePage = () => {
                 <div id="top" class="section main wf-section">
                     <div class="w-container">
                         <div class="w-row">
-                            <div class="w-col w-col-6">
-                                <h1 class="main-heading">Get an STI Test Recommendation with deSTIgma</h1>
-                                <p class="main-subtitle">The deSTIgma questionnaire will help you evaluate your risk for STIs and STDs, and connect you to resources near you.</p>
-                                <p> <Link to="/consentform" class="button">Let&#x27;s Go!</Link><a href="#info1" transition="ease" class="button hollow">Scroll down to learn more!</a></p>
+                          <h1 class="main-heading">Get an STI Test Recommendation with deSTIgma</h1>
+                          <div class="row">
+                            <div class="column left"><div class="text-block-4">The deSTIgma questionnaire will help you evaluate your risk for STIs and STDs, and connect you to resources near you.</div>
+                              <p class="pad-vertical"> <Link to="/consentform" class="button">Let&#x27;s Go!</Link><a href="#info1" transition="ease" class="button hollow">Scroll down to learn more!</a></p>
                             </div>
+                            <div class="column right"><img src={graph1} class="graph1"/></div>
+
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -23,7 +31,7 @@ const HomePage = () => {
               <h1 class="heading-home-1" id="info1"> Sexually Transmitted Infections and Diseases (STIs): A Hidden Epidemic </h1>
               <div class= "row">
                 <div class="column left">
-                  <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="casesperyear" class="graph1" alt="sans"/></div>
+                  <img src={graph2} id="casesperyear" class="graph1 zoom" alt="sans"/></div>
 
                 <div class="column right">
                   <div class="subheading-home-1"> Reported STIs reached an all-time high for the 6th year in a row in 2019.</div>
@@ -38,7 +46,7 @@ const HomePage = () => {
                 </div>
 
                 <div class="column right">
-                  <img src="https://thumbs.gfycat.com/BitesizedDeafeningFlounder-max-1mb.gif" id="weeklycases" class="graph2"/>
+                  <img src={graph3} id="weeklycases" class="graph2 zoom"/>
                 </div>
               </div>
 
@@ -48,8 +56,8 @@ const HomePage = () => {
             <div className="section2">
               <h1 class="heading-home-1">The Stigma Behind STIs</h1>
               <div class="text-block-2">Do you feel guilty about a broken arm? A cold?</div>
-              <div class="text-block-2"><strong>##% of people reported feeling shame or embarrassment when visiting a physician for STI testing.*</strong></div>
-              <div class="text-block-small">*According to ###, surveying ### individuals.</div>
+              <div class="text-block-2 pad-horizontal"><strong>One-third of young adults reported having foregone medical attention because they felt shame or embarrassment about visiting a physician for STI testing.*</strong></div>
+              <div class="text-block-small">*According to survey of ~50 Columbia students.</div>
             </div>
 
             <div class="section">
@@ -66,7 +74,8 @@ const HomePage = () => {
 
             <div class="section3">
               <div class="text-block-small light-font">Produced in partnership with</div>
-              <img src="Columbia-logo.png" alt="Columbia School of Engineering logo"/>
+              <a href="https://www.bme.columbia.edu/" target="blank"><img src={columbia_logo} id="columbia-logo" alt="Columbia School of Engineering logo"/></a>
+              <a href="https://www.onefact.org" target="blank"><img src={onefact_logo} id="onefact-logo" alt="OneFact.org logo"/></a>
             </div>
 
 
