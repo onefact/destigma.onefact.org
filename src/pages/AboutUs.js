@@ -34,7 +34,7 @@ return (
       <div class= "row">
         <div class="column left">
           <div class="subheading-home-1"> Susanna Baek</div>
-          <div class="text-block-4"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="text-block-4">Susanna Baek is an incoming graduate student at Columbia University, studying Biomedical Engineering. She is currently doing research at Dr. Sam Sia’s lab known for their application of microfluidics in point-of-care diagnostics and mobile health, and therapeutics with cell and tissue engineering. She enjoys spending her free time with her friends, playing music, penny boarding, and traveling! </div>
         </div>
 
         <div class="column right">
@@ -45,7 +45,7 @@ return (
       <div class= "row">
         <div class="column left">
           <div class="subheading-home-1"> Ruxandra Tonea</div>
-          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="text-block-1">Ruxandra is an incoming graduate student at University of Chicago studying Immunoengineering. She has experience with synthetic genetic circuits in bacteria and computational analysis of single-cell RNA-seq data. She likes taking long walks, skating, and traveling.</div>
         </div>
 
         <div class="column right">
@@ -56,7 +56,7 @@ return (
       <div class= "row">
         <div class="column left">
           <div class="subheading-home-1"> Andy Garcia</div>
-          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="text-block-1">Andy is an anticipated May 2022 graduate of Columbia University who has spent the past four years advocating for Latino students across the University in several capacities, while studying Biomedical Engineering. He is currently evaluating post-graduate opportunities, and is excited to reunite with his two-year old Border Collie, Valentina, soon. In his free time, he enjoys running and spending time outdoors.</div>
         </div>
 
         <div class="column right">
@@ -66,7 +66,7 @@ return (
       <div class= "row">
         <div class="column left">
           <div class="subheading-home-1"> Katharyn Fatehi</div>
-          <div class="text-block-1"> Despite medical advances, STI cases increased for nearly the past decade, indicating a <strong> desperate need for improved education and awareness!</strong> </div>
+          <div class="text-block-1"> Katharyn Fatehi is an anticipated May 2022 graduate of Columbia University. She is currently doing research in Dr. Sam Sia’s lab (similar to Susanna) along with an ongoing project that involves modeling bee arithmetics using neural networks and reinforcement learning. In her free time, Katharyn enjoys playing soccer, listening to music, and hanging out with friends. </div>
         </div>
 
         <div class="column right">

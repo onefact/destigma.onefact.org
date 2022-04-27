@@ -3,11 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import MapMarker from './MapMarker';
 
 const MAP_CENTER = {
-    lat: 40.815832,
+    lat: 40.755832,
     lng: -73.959502
 };
 
-const MAP_ZOOM = 11;
+const MAP_ZOOM = 12;
 
 const CLINIC_LOCATIONS = [
     {

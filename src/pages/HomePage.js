@@ -6,6 +6,7 @@ import graph3 from './2020-STD-covid-increase.jpg';
 import graph1 from './chlam-gon-syph-2015.png';
 import columbia_logo from './Columbia_Engineering_Logo.png'
 import onefact_logo from './one-fact-logo.png'
+import lgc_logo from './letsgetchecked_logo.jpg'
 
 const HomePage = () => {
     return (
@@ -76,6 +77,7 @@ const HomePage = () => {
               <div class="text-block-small light-font">Produced in partnership with</div>
               <a href="https://www.bme.columbia.edu/" target="blank"><img src={columbia_logo} id="columbia-logo" alt="Columbia School of Engineering logo"/></a>
               <a href="https://www.onefact.org" target="blank"><img src={onefact_logo} id="onefact-logo" alt="OneFact.org logo"/></a>
+              <a href="https://www.letsgetchecked.com" target="blank"><img src={lgc_logo} id="lgc-logo" alt= "LetsGetChecked.com logo"/></a>
             </div>
 
 

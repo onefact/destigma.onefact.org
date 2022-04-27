@@ -91,11 +91,6 @@ const surveyJson = {
         title: "Do you currently have any symptoms of STIs? (eg. pain, itchiness, swelling, blisters, bleeding, etc. in genital and/or oral regions?)",
         isRequired: true
         },
-        {
-        type: "boolean",
-        name: "question6",
-        title: "Have you ever experienced domestic violence or sexual assault? If Yes, please be aware of the confidential, 24/7 National Domestic Violence Hotline at 1-800-799-7233 (SAFE)."
-        },
 
         {
         type: "checkbox",
@@ -132,11 +127,7 @@ const surveyJson = {
             }
         ]
         },
-        {
-        type: "boolean",
-        name: "question19",
-        title: "Would you like more information about birth control methods?"
-        }
+
         ],
         title: "Basic Information",
         description: "We will never collect personally identifying information like your name and date of birth."

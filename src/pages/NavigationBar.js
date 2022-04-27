@@ -14,14 +14,8 @@ const NavigationBar =()=> {
         <a href="/" class="nav-link w-nav-link">The Need for STI Testing</a>
         <img src={logo} href="/" class="destig-icon"></img>
         <a href="/" class="w-nav-brand"><div class="logo-text">deSTIgma</div></a>
-
-
       </nav>
-      {/* <div className="nav-bar-wrapper">
-        <div className="toggle">toggle</div>
-        <div className="item">Home</div>
-        <div className="destig-icon">icon</div>
-      </div> */}
+
 
       <input type="checkbox" id="hamburger-input" class="hamburger-shower"/>
       <label id="hamburger-menu" for="hamburger-input">

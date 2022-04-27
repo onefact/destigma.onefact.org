@@ -194,6 +194,12 @@ p {
   margin-top:3vh;
 }
 
+#lgc-logo {
+  width: 15vw;
+  margin-left: 5vw;
+  margin-top: 2vh;
+}
+
 .logo-text{
   margin-top: 24px;
   font-family: Roboto Slab;
@@ -442,6 +448,19 @@ ol> li::marker {
 }
 .heading-clinic {
   padding-top: 10px;
+}
+
+.heading-clinic:target {
+  margin-top:-200px;
+  padding-top: 220px;
+}
+
+.heading-clinic:target:before {
+  content: " ";
+  position: absolute;
+  top: 200px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .clinic-info {
