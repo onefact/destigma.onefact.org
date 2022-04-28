@@ -9,7 +9,7 @@ StylesManager.applyTheme("modern");
 
 const surveyJson = {
     title: "DeSTIgma Questionnaire",
-    description: "Questionnaire for STI screening. Survey will collect medical history, sexual activity history, and symptoms (if present). Participation is voluntary and can be stopped at any time by exiting the survey.",
+    description: "Questionnaire for STI screening. Survey will collect medical history, sexual activity history, and symptoms (if present). Participation is voluntary (you do NOT need to answer all of the questions) and can be stopped at any time by exiting the survey.",
     logoPosition: "right",
     pages: [
         {
@@ -35,7 +35,12 @@ const surveyJson = {
             {
             value: "item4",
             text: "Transgender Female"
+            },
+            {
+            value: "item5",
+            text: "Other/Non-binary"
             }
+
         ]
         },
         {
@@ -130,7 +135,7 @@ const surveyJson = {
 
         ],
         title: "Basic Information",
-        description: "We will never collect personally identifying information like your name and date of birth."
+        description: "We will never collect personally identifying information like your name and date of birth. The after completing this basic information section, the rest of the survey will collect medical history, sexual activity history, and symptoms (if present). Participation is voluntary (you do NOT need to answer all of the questions) and can be stopped at any time by exiting the survey."
         },
         {
         name: "page2",
@@ -322,7 +327,9 @@ const surveyJson = {
         title: "Symptoms",
         description: "From the list of symptoms below, please identify any you may be feeling to the best of your ability."
         }
-    ]
+    ],
+    showProgressBar: "both",
+    progressBarType: "questions"
 };
 
 const SurveyPage = ({ resultCallback }) => {
@@ -334,10 +341,10 @@ const SurveyPage = ({ resultCallback }) => {
     resultCallback(sender.data);
     navigate('/results');
   }, []);
-
   survey.onComplete.add(saveResults);
 
-  return <Survey model={survey} />;
+  return <
+  Survey model={survey} />;
 }
 
 export default SurveyPage;

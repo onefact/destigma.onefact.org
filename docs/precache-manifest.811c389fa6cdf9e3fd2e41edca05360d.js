@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e681b9e3d76d910af245",
+    "revision": "68526ef7e83b7565bd68",
     "url": "/static/css/main.00e66c3d.chunk.css"
   },
   {
-    "revision": "e681b9e3d76d910af245",
-    "url": "/static/js/main.650551a5.chunk.js"
+    "revision": "68526ef7e83b7565bd68",
+    "url": "/static/js/main.c3eb0507.chunk.js"
   },
   {
     "revision": "08968c0151e6e38e6613",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/static/media/destigma-logo.5427d227.png"
   },
   {
-    "revision": "52f56fb6ab2b57328755afd1625f3b13",
+    "revision": "b9c7e7d55268c5678f11e2bb6cdeabee",
     "url": "/index.html"
   }
 ];
