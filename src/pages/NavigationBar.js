@@ -7,10 +7,10 @@ const NavigationBar =()=> {
   <>
   <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
       <nav id="main-menu" class="nav-bar-wrapper">
-        <a href="./consentform" class="nav-link w-nav-link"><strong>Get Started</strong></a>
-        <a href="./aboutus" class="nav-link w-nav-link">About Us</a>
-        <a href="./education" class= "nav-link w-nav-link">Education</a>
-        <a href="./results" class="nav-link w-nav-link">Service Locator</a>
+        <a href="/consentform" class="nav-link w-nav-link"><strong>Get Started</strong></a>
+        <a href="/aboutus" class="nav-link w-nav-link">About Us</a>
+        <a href="/education" class= "nav-link w-nav-link">Education</a>
+        <a href="/results" class="nav-link w-nav-link">Service Locator</a>
         <a href="/" class="nav-link w-nav-link">The Need for STI Testing</a>
         <img src={logo} href="/" class="destig-icon"></img>
         <a href="/" class="w-nav-brand"><div class="logo-text">deSTIgma</div></a>
