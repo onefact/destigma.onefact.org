@@ -13,7 +13,7 @@ const App = () => {
   const [ surveyResults, setSurveyResults ] = useState(null);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <NavigationBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
