@@ -1,6 +1,7 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import MapMarker from './MapMarker';
+import { Link } from 'react-router-dom';
 
 const MAP_CENTER = {
     lat: 40.755832,
@@ -961,7 +962,7 @@ const SurveyResultsPage = ({ results }) => {
       </div>
 
       <div class="section2 under-map">
-        <div class="heading-home-1">Check out our <a href="/education" target="blank" class="page-link">Education</a> page to learn about the STIs you may be at risk for.</div>
+        <div class="heading-home-1">Check out our <Link to="/education" target="blank" class="page-link">Education</Link> page to learn about the STIs you may be at risk for.</div>
 
       </div>
 

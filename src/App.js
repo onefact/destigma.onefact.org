@@ -15,15 +15,15 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <NavigationBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/consentform" element={<ConsentForm />}/>
-        <Route path="/survey" element={<SurveyPage resultCallback={setSurveyResults} />} />
-        <Route path="/results" element={<SurveyResultsPage results={surveyResults} />} />
-        <Route path="/aboutus" element={<AboutUs />}/>
-        <Route path="/fullconsentform" element={<FullConsentForm/>}/>
-        <Route path="/education" element={<Education/>}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/consentform" element={<ConsentForm />}/>
+          <Route path="/survey" element={<SurveyPage resultCallback={setSurveyResults} />} />
+          <Route path="/results" element={<SurveyResultsPage results={surveyResults} />} />
+          <Route path="/aboutus" element={<AboutUs />}/>
+          <Route path="/fullconsentform" element={<FullConsentForm/>}/>
+          <Route path="/education" element={<Education/>}/>
+        </Routes>
     </BrowserRouter>
   );
 }
