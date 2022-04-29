@@ -2,6 +2,7 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import MapMarker from './MapMarker';
 import { Link } from 'react-router-dom';
+// import { SYMPTOMS, STI_symptoms, RISK_FACTORS, STI_risks } from './SurveyPage';
 
 const MAP_CENTER = {
     lat: 40.755832,
@@ -384,13 +385,207 @@ const CLINIC_LOCATIONS = [
     }
 ];
 
+let SYMPTOMS = {
+    1: 'genital bleeding ',
+    2: 'genital pain',
+    3: 'genital itch/rash',
+    4: 'genital warts/bumps/sores',
+    5: 'problems with urination',
+    6: 'abnormal urine',
+    7: 'abnormal discharge',
+    8: 'oral sores/blisters/lesions',
+    9: 'rectal pain/itchiness',
+    10: 'abnormal rectal discharge',
+    11: 'visual abnormalities',
+    12: 'swollen/painful joints',
+    13: 'abnormal fatigue',
+    14: 'nausea/headache',
+    15: 'fever',
+}
+
+let STI_symptoms = {'HIV/AIDS' : [4, 15, 6, 16],
+       'HPV' : [4],
+       'Syphilis' : [4, 5, 8, 15, 16, 13, 11],
+       'Chlamydia' : [1, 5, 7, 2, 3, 10],
+       'Trichomoniasis' : [2, 3, 7,11],
+       'Gonorrhea' : [1, 5, 7, 2, 10, 16, 11],
+       'Bacterial Vaginosis' : [3, 5, 7],
+       'Poxvirus/Molluscum Contagiosum' : [4],
+       'Mycoplasma' : [2, 3, 14, 5, 7],
+       'Ureaplasma' : [5, 7],
+       'Pubic lice' : [3, 14, 15],
+       'Urinary tract infection' : [15, 5],
+       'Prostatitis' : [2, 5, 3, 15],
+       'Candidiasis (Yeast)' : [4, 2, 3, 5, 7],
+       'Herpes Simplex Virus I, Oral' : [8, 13, 15, 16],
+       'Herpes Simplex Virus II, Genital' : [4, 2, 3],
+       'Mono' : [8, 13, 15, 16],
+       'Hepatitis' : [5, 13, 15, 16, 12, 11]}
+
+
+let RISK_FACTORS = {5:'sex with symptomatic',
+                8:'sex worker sexual partner',
+                9:'sex without physical barrier',
+                11:'anal insertive',
+                12:'anal receptive',
+                13:'oral insertive',
+                14:'oral receptive',
+                15:'vaginal',
+                16:'more than 3 partners in the last month',
+                17:'recent bacterial STI test (gonorrhea, chlamydia, syphilis)',
+                18:'recent trichomoniasis test',
+                19:'recent HIV test',
+                20:'recent hep test',
+                21:'recent HPV test',
+                22:'recent mononucleosis test',
+                24:'no hep A vax',
+                25:'no hep B vax',
+                26:'no HPV shots',
+                27:'blood transfusion',
+                28:'needle/blood exposure',
+                29:'pregnant'}
+
+let STI_risks = {'HIV/AIDS' : [5,8,11,12,15,24,25,27,28,29],
+       'HPV' : [5,8,11,12,15,28,19,26,16],
+       'Syphilis' : [5,8,9,11,12,13,14,15,29],
+       'Chlamydia' : [5,8,9,11,12,13,14,15,29,16],
+       'Trichomoniasis' : [5,8,9,15,29,16],
+       'Gonorrhea' : [5,8,9,15,13,14,23,16],
+       'Bacterial Vaginosis' : [5,9,15,16],
+       'Poxvirus/Molluscum Contagiosum' : [19,28,13,14,5,8,9,11,12,15,16],
+       'Mycoplasma' : [5,8,9,11,12,15,16],
+       'Ureaplasma' : [5,8,9,11,12,15,29,16],
+       'Pubic lice' : [5,11,12,13,14,15,23],
+       'Urinary tract infection' : [],
+       'Prostatitis' : [],
+       'Candidiasis (Yeast)' : [],
+       'Herpes Simplex Virus I, Oral' : [13,29],
+       'Herpes Simplex Virus II, Genital' : [17,18,19,20,21,22,8],
+       'Mono' : [8,9,11,12,13,14,15],
+       'Hepatitis' : [8,11,12,13,14,15,20,27,28]}
+
+//{"question1":"item3",
+// "question2":"item2",
+// "question3":["item2"],
+// "question4":false,
+// "question5":true,
+// "question6":["item1None/","item2"],
+// "question7":false,
+// "question8":false,
+// "question9":[19,21,20],
+// "question10":[24],
+// "question11":true,
+// "question12":true,
+// "question13":true,
+// "question14":[11,12,13,14,15],
+// "question15":true,
+// "question16":[1,2,3,4,5,6,10,14,15,12]}
+
+function question10(match_risk_results) {
+  return match_risk_results;
+};
+
+function match_test(risk_factors) {
+  let matched_risk_results = []
+  for (const i of risk_factors) {
+    if (i[0] != "s") {
+      for (const [key, value] of Object.entries(STI_risks)) {
+        if (i in value) {
+          console.log("STI_risks:", key)
+          if (!matched_risk_results.includes(key)) {
+            console.log("RISKS duplicate!")
+            matched_risk_results.push(key)
+          }
+        }
+      }
+    }
+    else {
+      let d_s = parseInt(i.substring(1))
+      for (const [key, value] of Object.entries(STI_symptoms)) {
+        if (d_s in value) {
+          console.log("STI_symptoms:", key)
+          if (!matched_risk_results.includes(key)) {
+            console.log("STI_symptoms: duplicate!")
+            matched_risk_results.push(key)
+          }
+        }
+      }
+    }
+  }
+  return matched_risk_results;
+};
+
+function raw_to_risk_factors(results) {
+  var risk_factors = []
+  if ("question7" in results) {
+    risk_factors.push(27)
+  }
+  if ("question8" in results) {
+    risk_factors.push(28)
+  }
+  if ("question9" in results) {
+    let tests = results["question9"]
+    if (!(17 in tests)) {risk_factors.push(17)}
+    if (!(18 in tests)) {risk_factors.push(18)}
+    if (!(19 in tests)) {risk_factors.push(19)}
+    if (!(20 in tests)) {risk_factors.push(20)}
+    if (!(21 in tests)) {risk_factors.push(21)}
+    if (!(22 in tests)) {risk_factors.push(22)}
+  }
+  if ("question11" in results) {
+    risk_factors.push(5)
+  }
+  if ("question12" in results) {
+    risk_factors.push(9)
+  }
+  if ("question13" in results) {
+    risk_factors.push(16)
+  }
+  if ("question14" in results) {
+    let tests = results["question14"]
+    if (11 in tests) {risk_factors.push(11)}
+    if (12 in tests) {risk_factors.push(12)}
+    if (13 in tests) {risk_factors.push(13)}
+    if (14 in tests) {risk_factors.push(14)}
+    if (15 in tests) {risk_factors.push(15)}
+  }
+  if ("question15" in results) {
+    risk_factors.push(29)
+  }
+  if ("question16" in results) {
+    let tests = results["question16"]
+    if (1 in tests) {risk_factors.push("s1")}
+    if (2 in tests) {risk_factors.push("s2")}
+    if (3 in tests) {risk_factors.push("s3")}
+    if (4 in tests) {risk_factors.push("s4")}
+    if (5 in tests) {risk_factors.push("s5")}
+    if (6 in tests) {risk_factors.push("s6")}
+    if (7 in tests) {risk_factors.push("s7")}
+    if (8 in tests) {risk_factors.push("s8")}
+    if (9 in tests) {risk_factors.push("s9")}
+    if (10 in tests) {risk_factors.push("s10")}
+    if (11 in tests) {risk_factors.push("s11")}
+    if (12 in tests) {risk_factors.push("s12")}
+    if (13 in tests) {risk_factors.push("s13")}
+    if (14 in tests) {risk_factors.push("s14")}
+    if (15 in tests) {risk_factors.push("s15")}
+  }
+  let match_risk_results = match_test(risk_factors)
+  let final_risk_results = question10(match_risk_results)
+  return final_risk_results
+}
+
+function risk_to_test(risk_factors) {
+  return risk_factors
+}
+
 const SurveyResultsPage = ({ results }) => {
     return (
       <>
       <div class="section2">
         <h1 class="heading-10">Test Results and Map Locator</h1>
         <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
-          <p>{JSON.stringify(results)}</p>
+          <p>{JSON.stringify(risk_to_test(raw_to_risk_factors(results)))}</p>
       </div>
 
       <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
