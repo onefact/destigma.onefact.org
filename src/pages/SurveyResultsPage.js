@@ -482,18 +482,24 @@ let STI_risks = {'HIV/AIDS' : [5,8,11,12,15,24,25,27,28,29],
 // "question16":[1,2,3,4,5,6,10,14,15,12]}
 
 function question10(match_risk_results, results) {
-  const filtered = []
+  console.log(match_risk_results)
   let vaccinations = results["question10"]
-  if (24 in vaccinations && 25 in vaccinations) {
-    if ("Hepatitis" in match_risk_results) {
-      filtered = match_risk_results.filter(val=> val !== 'Hepatitis')
+  var filtered = match_risk_results
+  console.log(vaccinations)
+  if (vaccinations.includes(24) && vaccinations.includes(25)) {
+    console.log("asdkhflkjasdhf")
+    if (filtered.includes("Hepatitis")) {
+      console.log("found heppy")
+      filtered = filtered.filter(val => val !== 'Hepatitis')
     }
   }
-  if (26 in vaccinations) {
-    if ("HPV" in match_risk_results) {
-      filtered = match_risk_results.filter(val=> val !== 'HPV')
+  if (vaccinations.includes(26)) {
+    console.log("hdsahfjhsdfkjahsfkljhsd")
+    if (filtered.includes("HPV")) {
+      filtered = filtered.filter(val=> val !== 'HPV')
     }
   }
+  console.log(filtered)
   return filtered;
 };
 
@@ -634,7 +640,7 @@ const SurveyResultsPage = ({ results }) => {
                 <li class="hours-list"> Closed Sat-Sun</li>
               </ul>
             <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
-            <div class="clinic-note">Women's // HACK: ealth. Requires co-pay</div>
+            <div class="clinic-note">Women's Health. Requires co-pay</div>
 
           <li><div class="heading-clinic" id="2"><strong>Pure OBGYN</strong></div>
             <div class="clinic-info">32 W 20th St, New York, NY 10011</div>
