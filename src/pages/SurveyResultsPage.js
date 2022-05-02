@@ -438,9 +438,9 @@ let RISK_FACTORS = {5:'sex with symptomatic',
                 20:'recent hep test',
                 21:'recent HPV test',
                 22:'recent mononucleosis test',
-                24:'no hep A vax',
-                25:'no hep B vax',
-                26:'no HPV shots',
+                24:'hep A vax',
+                25:'hep B vax',
+                26:'HPV shots',
                 27:'blood transfusion',
                 28:'needle/blood exposure',
                 29:'pregnant'}
@@ -481,11 +481,32 @@ let STI_risks = {'HIV/AIDS' : [5,8,11,12,15,24,25,27,28,29],
 // "question15":true,
 // "question16":[1,2,3,4,5,6,10,14,15,12]}
 
-function question10(match_risk_results) {
-  return match_risk_results;
+function question10(match_risk_results, results) {
+  console.log(match_risk_results)
+  let vaccinations = results["question10"]
+  var filtered = match_risk_results
+  console.log(vaccinations)
+  if (vaccinations.includes(24) && vaccinations.includes(25)) {
+    console.log("asdkhflkjasdhf")
+    if (filtered.includes("Hepatitis")) {
+      console.log("found heppy")
+      filtered = filtered.filter(val => val !== 'Hepatitis')
+    }
+  }
+  if (vaccinations.includes(26)) {
+    console.log("hdsahfjhsdfkjahsfkljhsd")
+    if (filtered.includes("HPV")) {
+      filtered = filtered.filter(val=> val !== 'HPV')
+    }
+  }
+  console.log(filtered)
+  return filtered;
 };
 
 function match_test(risk_factors) {
+  if (!risk_factors) {
+    return []
+  }
   let matched_risk_results = []
   for (const i of risk_factors) {
     if (i[0] != "s") {
@@ -516,6 +537,9 @@ function match_test(risk_factors) {
 };
 
 function raw_to_risk_factors(results) {
+  if (!results) {
+    return ["Please take the survey to receive STI test recommendations."]
+  }
   var risk_factors = []
   if ("question7" in results) {
     risk_factors.push(27)
@@ -571,7 +595,7 @@ function raw_to_risk_factors(results) {
     if (15 in tests) {risk_factors.push("s15")}
   }
   let match_risk_results = match_test(risk_factors)
-  let final_risk_results = question10(match_risk_results)
+  let final_risk_results = question10(match_risk_results, results)
   return final_risk_results
 }
 
@@ -585,7 +609,7 @@ const SurveyResultsPage = ({ results }) => {
       <div class="section2">
         <h1 class="heading-10">Test Results and Map Locator</h1>
         <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
-          <p>{JSON.stringify(risk_to_test(raw_to_risk_factors(results)))}</p>
+          <div class="text-block-3">{JSON.stringify((risk_to_test(raw_to_risk_factors(results))).join(','))}</div>
       </div>
 
       <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
@@ -616,7 +640,7 @@ const SurveyResultsPage = ({ results }) => {
                 <li class="hours-list"> Closed Sat-Sun</li>
               </ul>
             <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
-            <div class="clinic-note">Women's // HACK: ealth. Requires co-pay</div>
+            <div class="clinic-note">Women's Health. Requires co-pay</div>
 
           <li><div class="heading-clinic" id="2"><strong>Pure OBGYN</strong></div>
             <div class="clinic-info">32 W 20th St, New York, NY 10011</div>

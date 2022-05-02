@@ -9,6 +9,7 @@ const NavigationBar =()=> {
       <nav id="main-menu" class="nav-bar-wrapper">
         <Link to="/consentform" class="nav-link w-nav-link"><strong>Get Started</strong></Link>
         <Link to="/aboutus" class="nav-link w-nav-link">About Us</Link>
+        <a href ="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.letsgetchecked.com_home-2Dstd-2Dtest_&d=DwMFaQ&c=009klHSCxuh5AI1vNQzSO0KGjl4nbi2Q0M1QLJX9BeE&r=vMAq2H__s9fa9ysqXSHhi3G6g7wEhZchAgsmIvE6Y9E&m=Prv5mROB8CW4DIL8EOeFWEbutCo_tIFIdn1o1zhi_QUoc_-iLWY_cAF2liuipvXy&s=yAOiNnyLothzRNJkUhvchx3aH29FADbsnkL6ZHLiQUI&e=" class="nav-link w-nav-link" target="blank">Purchase Tests</a>
         <Link to="/education" class= "nav-link w-nav-link">Education</Link>
         <Link to="/results" class="nav-link w-nav-link">Service Locator</Link>
         <Link to="/" class="nav-link w-nav-link">The Need for STI Testing</Link>
