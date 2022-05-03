@@ -603,10 +603,10 @@ const SurveyResultsPage = ({ results }) => {
       <div class="section2">
         <h1 class="heading-10">Test Results and Map Locator</h1>
         <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
-          <div class="text=block-3">{JSON.stringify((risk_to_test(raw_to_risk_factors(results))).join(','))}</div>
+          <div class="text=block-3 pad-horizontal">{JSON.stringify((risk_to_test(raw_to_risk_factors(results))).join(','))}</div>
       </div>
 
-      <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
+      <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll through the list of clinics to find testing near you!</div>
 
       <div>
         <div class="map-column">
@@ -634,7 +634,7 @@ const SurveyResultsPage = ({ results }) => {
                 <li class="hours-list"> Closed Sat-Sun</li>
               </ul>
             <a href="https://pureobgyn.com/" class="clinic-link"target="blank">Website: https://pureobgyn.com/</a></li>
-            <div class="clinic-note">Women's // HACK: ealth. Requires co-pay</div>
+            <div class="clinic-note">Women's health. Requires co-pay</div>
 
           <li><div class="heading-clinic" id="2"><strong>Pure OBGYN</strong></div>
             <div class="clinic-info">32 W 20th St, New York, NY 10011</div>

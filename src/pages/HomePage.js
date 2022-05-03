@@ -70,7 +70,7 @@ const HomePage = () => {
                 <li class="list-item">Purchase physician-approved LetsGetChecked© at-home STI test kits.</li>
               </ol>
               <div class="text-block-2 pad-vertical">Ready to get started?</div>
-              <p><Link to="/consentform" class="button">Let&#x27;s Go!</Link><a href="/results" class="button hollow">Clinic Locator</a></p>
+              <p><Link to="/consentform" class="button">Let&#x27;s Go!</Link><Link to="/results" class="button hollow">Clinic Locator</Link><a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.letsgetchecked.com_home-2Dstd-2Dtest_&d=DwMFaQ&c=009klHSCxuh5AI1vNQzSO0KGjl4nbi2Q0M1QLJX9BeE&r=vMAq2H__s9fa9ysqXSHhi3G6g7wEhZchAgsmIvE6Y9E&m=Prv5mROB8CW4DIL8EOeFWEbutCo_tIFIdn1o1zhi_QUoc_-iLWY_cAF2liuipvXy&s=yAOiNnyLothzRNJkUhvchx3aH29FADbsnkL6ZHLiQUI&e=" class="button hollow" target="blank">Purchase Tests</a></p>
             </div>
 
             <div class="section3">
