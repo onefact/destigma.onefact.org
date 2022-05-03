@@ -485,21 +485,16 @@ function question10(match_risk_results, results) {
   console.log(match_risk_results)
   let vaccinations = results["question10"]
   var filtered = match_risk_results
-  console.log(vaccinations)
   if (vaccinations.includes(24) && vaccinations.includes(25)) {
-    console.log("asdkhflkjasdhf")
     if (filtered.includes("Hepatitis")) {
-      console.log("found heppy")
       filtered = filtered.filter(val => val !== 'Hepatitis')
     }
   }
   if (vaccinations.includes(26)) {
-    console.log("hdsahfjhsdfkjahsfkljhsd")
     if (filtered.includes("HPV")) {
       filtered = filtered.filter(val=> val !== 'HPV')
     }
   }
-  console.log(filtered)
   return filtered;
 };
 
@@ -1181,7 +1176,7 @@ const SurveyResultsPage = ({ results }) => {
       </div>
 
       <div class="section2 under-map">
-        <div class="heading-home-1">Check out our <Link to="/education" target="blank" class="page-link">Education</Link> page to learn about the STIs you may be at risk for.</div>
+        <div class="heading-home-1">Check out our Education page to learn about the STIs that you may be at risk for.</div>
 
       </div>
 
