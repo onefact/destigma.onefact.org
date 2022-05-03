@@ -12,9 +12,7 @@ return (
       </div>
     </div>
     <div class="education-list">
-      <div class="pad-vertical">Test Recommendations:
-        <p>{JSON.stringify(results)}</p></div>
-      <div><i>Jump to:</i></div>
+      <div class="pad-vertical"><i>Jump to:</i></div>
       <ul class="education-link-list">
         <li><a href="#bacterial-vaginosis" class="education-link">Bacterial Vaginosis</a></li>
         <li><a href="#candidiasis" class="education-link">Candidiasis (Yeast)</a></li>

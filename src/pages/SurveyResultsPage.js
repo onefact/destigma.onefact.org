@@ -481,11 +481,26 @@ let STI_risks = {'HIV/AIDS' : [5,8,11,12,15,24,25,27,28,29],
 // "question15":true,
 // "question16":[1,2,3,4,5,6,10,14,15,12]}
 
-function question10(match_risk_results) {
-  return match_risk_results;
+function question10(match_risk_results, results) {
+  let vaccinations = results["question10"]
+  var filtered = match_risk_results
+  if (vaccinations.includes(24) && vaccinations.includes(25)) {
+    if (filtered.includes("Hepatitis")) {
+      filtered = filtered.filter(val => val !== 'Hepatitis')
+    }
+  }
+  if (vaccinations.includes(26)) {
+    if (filtered.includes("HPV")) {
+      filtered = filtered.filter(val => val !== 'HPV')
+    }
+  }
+  return filtered;
 };
 
 function match_test(risk_factors) {
+  if (!risk_factors) {
+    return []
+  }
   let matched_risk_results = []
   for (const i of risk_factors) {
     if (i[0] != "s") {
@@ -516,6 +531,9 @@ function match_test(risk_factors) {
 };
 
 function raw_to_risk_factors(results) {
+  if (!results) {
+    return ["Please complete the survey to receive STI test recommendations."]
+  }
   var risk_factors = []
   if ("question7" in results) {
     risk_factors.push(27)
@@ -571,7 +589,7 @@ function raw_to_risk_factors(results) {
     if (15 in tests) {risk_factors.push("s15")}
   }
   let match_risk_results = match_test(risk_factors)
-  let final_risk_results = question10(match_risk_results)
+  let final_risk_results = question10(match_risk_results, results)
   return final_risk_results
 }
 
@@ -585,7 +603,7 @@ const SurveyResultsPage = ({ results }) => {
       <div class="section2">
         <h1 class="heading-10">Test Results and Map Locator</h1>
         <div class="text-block-2 pad-vertical">We recommend you get tested for the following tests:</div>
-          <p>{JSON.stringify(risk_to_test(raw_to_risk_factors(results)))}</p>
+          <div class="text=block-3">{JSON.stringify((risk_to_test(raw_to_risk_factors(results))).join(','))}</div>
       </div>
 
       <div class="text-block-2 pad-vertical">Below is a map of STI clinics in NYC.<br/> Zoom in the map or scroll thorugh the list of clinics to find testing near you!</div>
@@ -1157,7 +1175,7 @@ const SurveyResultsPage = ({ results }) => {
       </div>
 
       <div class="section2 under-map">
-        <div class="heading-home-1">Check out our <Link to="/education" target="blank" class="page-link">Education</Link> page to learn about the STIs you may be at risk for.</div>
+        <div class="heading-home-1">Check out our Education page to learn about the STIs you may be at risk for.</div>
 
       </div>
 
